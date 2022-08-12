@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/index.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1>D<span>ata </span>S<span>cience</span></h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">Quiz</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Predict whether a person is married or divorced, <span></span></h1>
+        <h1>based on the person’s self-reported responses <span></span></h1>
+        <h1> regarding
+          their relationships <span></span></h1>
+        <a href="#services" type="button" class="cta">Quiz</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- Service Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Q<span>ui</span>z</h1>
+        <p>"Predict whether a person is married or divorced, based on the person’s self-reported responses regarding
+          their relationships"!</p>
+      </div>
+      <div class="service-bottom">
+
+        <form form class="grid" action="/result" method="POST">
+
+          {% if name %}
+          <center>
+            <h3 style="color: blue;" class="let_space">Hello {{name}}, How was your day!!</h3>
+          </center>
+          {% endif %}
+          <label for="name">Enter you name:</label>
+          <input type="text" id="name" name="name">
+          <div class="service-item">
+            <h2>Q1</h2>
+            <select id="args1" name="args1" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>If one of us apologizes when our discussion deteriorates, the discussion ends</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q2</h2>
+            <select id="args2" name="args2" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>When we need it, we can take our discussions with my spouse from the beginning and
+                correct it</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q3</h2>
+            <select id="args3" name="args3" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>The time I spent with my wife is special for us</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q4</h2>
+            <select id="args4" name="args4" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>We don't have time at home as partners</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q5</h2>
+            <select id="args5" name="args5" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>My spouse and I have similar sense of entertainment</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q6</h2>
+            <select id="args6" name="args6" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>We share the same views about being happy in our life with my spouse</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q7</h2>
+            <select id="args7" name="args7" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>My spouse and I have similar ideas about how roles should be in marriage</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q8</h2>
+            <select id="args8" name="args8" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>I know my spouse's favorite food</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q9</h2>
+            <select id="args9" name="args9" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>I know my spouse very well</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q10</h2>
+            <select id="args10" name="args10" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>I feel aggressive when I argue with my spouse</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q11</h2>
+            <select id="args11" name="args11" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>I can use negative statements about my spouse's personality during our discussions
+              </option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q12</h2>
+            <select id="args12" name="args12" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>When I talk to my spouse about something, my calm suddenly breaks</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q13</h2>
+            <select id="args13" name="args13" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>Even if I'm right in the discussion, I stay silent to hurt my spouse</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q14</h2>
+            <select id="args14" name="args14" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>Even if I'm right in the discussion, I stay silent to hurt my spouse</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q14</h2>
+            <select id="args15" name="args15" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>I feel right in our discussions</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q15</h2>
+            <select id="args16" name="args16" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>I'm not the one who's wrong about problems at home</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <div class="service-item">
+            <h2>Q16</h2>
+            <select id="args16" name="args4" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>I'm not afraid to tell my spouse about her/his incompetence</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="3">Four</option>
+            </select>
+          </div>
+
+          <center><input class="file_submit" type="Submit"></center>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- End Service Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>D</span>ata <span>S</span>cience</h1>
+      </div>
+
+      <p>Copyright © 2020 Data science. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
