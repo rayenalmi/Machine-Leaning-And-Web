@@ -1,5 +1,21 @@
 # Machine-Leaning-And-Web
 
+clone the project:
+#git clone https://github.com/rayenalmi/Machine-Leaning-And-Web.git
+
+RUN THE PROJECT : 
+#python3 -m pip install virtualenv
+
+#virtualenv .
+
+#activate
+
+install flask : # python3 -m pip install Flask
+
+# flask run
+
+then open the URL : 
+http://127.0.0.1:5000/
 
 Start : 
 
