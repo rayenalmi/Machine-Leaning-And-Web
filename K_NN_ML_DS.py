@@ -23,7 +23,9 @@ def K_NN_DS_ALGO(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,
 		nearest_neighbor_ids = distances.argsort()[:k]
 		print(nearest_neighbor_ids)
 		nearest_neighbor_rings = Y[nearest_neighbor_ids]
+		print('------')
 		print(nearest_neighbor_rings)
+		print('------')
 		m,div =0,0
 		for i in nearest_neighbor_rings :
 			if i == 1 : 
